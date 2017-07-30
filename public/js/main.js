@@ -116,10 +116,16 @@
   }
 
   function playerStartMovement(movementData) {
-    console.log(movementData);
+    var data = movementData.payload;
+    var player = players[data.id];
+    player.body.velocity.x = data.velocityX;
+    player.body.velocity.y = data.velocityY;
   }
 
   function playerStopMovement(movementData) {
-    console.log(movementData);
+    var data = movementData.payload;
+    var player = players[data.id];
+    player.body.velocity.x = data.velocityX;
+    player.body.velocity.y = data.velocityY;
   }
 })();
