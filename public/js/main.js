@@ -116,6 +116,8 @@
   }
 
   function playerStartMovement(movementData) {
+    console.log(players);
+    console.log(movementData);
     var data = movementData.payload;
     var player = players[data.id];
     player.body.velocity.x = data.velocityX;
